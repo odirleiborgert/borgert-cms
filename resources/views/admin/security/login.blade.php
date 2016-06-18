@@ -9,15 +9,15 @@
 
         <link href="{!! asset('assets/components/bootstrap/dist/css/bootstrap.min.css') !!}" rel="stylesheet">
         <link href="{!! asset('assets/components/font-awesome/css/font-awesome.min.css') !!}" rel="stylesheet">
-        
+
         <link href="{!! asset('assets/components/animate.css/animate.min.css') !!}" rel="stylesheet">
         <link href="{!! asset('assets/admin/css/app.css') !!}" rel="stylesheet">
 
     </head>
     <body class="gray-bg">
-        
+
         <div class="middle-box text-center loginscreen animated fadeInDown">
-            
+
             <img src="{{ asset('assets/admin/img/rocket-medium.png') }}" class="img-circle">
 
             <h3>Bem Vindo ao Rocket CMS</h3>
@@ -25,25 +25,25 @@
             <div class="text-left">
                 @include('admin._inc.alerts')
             </div>
-            
+
             <form class="m-t" role="form" method="POST" action="/auth/login">
 
                 {!! csrf_field() !!}
 
                 <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="E-mail" required="" value="{{ old('email') }}">
+                    <input type="text" name="login" class="form-control" placeholder="Nome de usuário ou E-mail" required value="{{ old('login') }}" autofocus>
                 </div>
                 <div class="form-group">
                     <input type="password" name="password" class="form-control" placeholder="Senha" required="">
                 </div>
-                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+                <button type="submit" class="btn btn-danger block full-width m-b"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
 
                 <a href="{{ route('forget_password') }}"><small>Esqueceu sua senha?</small></a>
             </form>
             <br>
             <br>
             <p class="m-t"> <small>Rocket CMS &copy; {{ date('Y') }}</small> </p>
-            
+
         </div>
 
         <!-- Mainly scripts -->
