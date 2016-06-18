@@ -8,19 +8,19 @@
         <title>@yield('title') | Rocket CMS</title>
 
         @section('stylesheet')
-        
+
             <!-- Bootstrap -->
             <link href="{!! asset('assets/components/bootstrap/dist/css/bootstrap.min.css') !!}" rel="stylesheet">
 
             <!-- Font Awesome Icons -->
             <link href="{!! asset('assets/components/font-awesome/css/font-awesome.min.css') !!}" rel="stylesheet">
-            
+
             <!-- Summernote -->
             <link href="{!! asset('assets/components/summernote/dist/summernote.css') !!}" rel="stylesheet">
-            
+
             <!-- Animate.css -->
             <link href="{!! asset('assets/components/animate.css/animate.min.css') !!}" rel="stylesheet">
-            
+
             <!-- Blueimp Jquery File Upload -->
             <link href="{!! asset('assets/components/blueimp-file-upload/css/jquery.fileupload.css') !!}" rel="stylesheet">
             <link href="{!! asset('assets/components/blueimp-file-upload/css/jquery.fileupload-ui.css') !!}" rel="stylesheet">
@@ -47,32 +47,32 @@
                                 <i class="fa fa-rocket"></i>
                             </div>
                         </li>
-                        <li><a href="{{ route('admin.index') }}"><i class="fa fa-dashboard"></i> <span class="nav-label">Dashboard</span></a></li>
-                        <li>
+                        <li {{ setActive('admin') }}><a href="{{ route('admin.index') }}"><i class="fa fa-dashboard"></i> <span class="nav-label">Dashboard</span></a></li>
+                        <li {{ setActive('admin/blog/*') }}>
                             <a href="#"><i class="fa fa-comments"></i> <span class="nav-label">Blog</span> <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li><a href="{{ route('admin.blog.categorys.list') }}">Categorias</a></li>
-                                <li><a href="{{ route('admin.blog.posts.list') }}">Posts</a></li>
-                                <li><a href="{{ route('admin.blog.comments.list') }}">Comentários</a></li>
+                                <li {{ setActive('admin/blog/categorys/*') }}><a href="{{ route('admin.blog.categorys.list') }}">Categorias</a></li>
+                                <li {{ setActive('admin/blog/posts/*') }}><a href="{{ route('admin.blog.posts.list') }}">Posts</a></li>
+                                <li {{ setActive('admin/blog/comments/*') }}><a href="{{ route('admin.blog.comments.list') }}">Comentários</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li {{ setActive('admin/pages/*') }}>
                             <a href="#"><i class="fa fa-file-text"></i> <span class="nav-label">Páginas</span> <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li><a href="{{ route('admin.pages.categorys.list') }}">Categorias</a></li>
-                                <li><a href="{{ route('admin.pages.contents.list') }}">Conteúdos</a></li>
+                                <li {{ setActive('admin/pages/categorys/*') }}><a href="{{ route('admin.pages.categorys.list') }}">Categorias</a></li>
+                                <li {{ setActive('admin/pages/contents/*') }}><a href="{{ route('admin.pages.contents.list') }}">Conteúdos</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li {{ setActive('admin/products/*') }}>
                             <a href="#"><i class="fa fa-cube"></i> <span class="nav-label">Produtos</span> <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li><a href="{{ route('admin.products.categorys.list') }}">Categorias</a></li>
-                                <li><a href="{{ route('admin.products.contents.list') }}">Conteúdos</a></li>
+                                <li {{ setActive('admin/products/categorys/*') }}><a href="{{ route('admin.products.categorys.list') }}">Categorias</a></li>
+                                <li {{ setActive('admin/products/contents/*') }}><a href="{{ route('admin.products.contents.list') }}">Conteúdos</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ route('admin.gallerys.list') }}"><i class="fa fa-photo"></i> <span class="nav-label">Galerias de Imagens</span></a></li>
-                        <li><a href="{{ route('admin.mailbox.inbox') }}"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox</span></a></li>
-                        <li><a href="{{ route('admin.users.list') }}"><i class="fa fa-users"></i> <span class="nav-label">Usuários</span></a></li>
+                        <li {{ setActive('admin/gallerys/*') }}><a href="{{ route('admin.gallerys.list') }}"><i class="fa fa-photo"></i> <span class="nav-label">Galerias de Imagens</span></a></li>
+                        <li {{ setActive('admin/mailbox/*') }}><a href="{{ route('admin.mailbox.inbox') }}"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox</span></a></li>
+                        <li {{ setActive('admin/users/*') }}><a href="{{ route('admin.users.list') }}"><i class="fa fa-users"></i> <span class="nav-label">Usuários</span></a></li>
                     </ul>
                 </div>
             </nav>
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Footer -->
                 <div class="footer">
                     <div class="pull-right"><a href="https://github.com/odirleiborgert/rocket-cms" target="_blank"><u>Open Source</u> <i class="fa fa-github"></i></a> - <strong>v.0.0.7</strong></div>
@@ -122,7 +122,7 @@
 
             <!-- Bootstrap -->
             <script type="text/javascript" src="{!! asset('assets/components/bootstrap/dist/js/bootstrap.min.js') !!}"></script>
-            
+
             <!-- Menu (Scroll && Toogle ) -->
             <script type="text/javascript" src="{!! asset('assets/components/slimScroll/jquery.slimscroll.min.js') !!}"></script>
             <script type="text/javascript" src="{!! asset('assets/components/metisMenu/dist/metisMenu.min.js') !!}"></script>
