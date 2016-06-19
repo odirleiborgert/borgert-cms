@@ -32,8 +32,8 @@ class LoginController extends Controller
             return redirect()->route('admin.index');
         }*/
 
-        $field = filter_var($request->input('username'), FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
-        $request->merge([$field => $request->input('username')]);
+        $field = filter_var($request->input('login'), FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+        $request->merge([$field => $request->input('login')]);
 
         if ($this->auth->attempt($request->only($field, 'password'))) {
             return redirect()->route("admin.index");
