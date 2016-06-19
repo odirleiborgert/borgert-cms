@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use mjanssen\BreadcrumbsBundle\Breadcrumbs;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +14,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        \View::composer('components.breadcrumbs', function(){
+            $data = [
+                'global_breadcrumbs' => Breadcrumbs::automatic()
+            ];
+            view()->share($data);
+        });
     }
 
     /**

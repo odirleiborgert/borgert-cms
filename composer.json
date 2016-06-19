@@ -16,7 +16,8 @@
         "illuminate/html": "^5.0",
         "doctrine/dbal": "^2.5",
         "thomaswelton/laravel-gravatar": "^1.1",
-        "kyslik/column-sortable": "^5.0"
+        "kyslik/column-sortable": "^5.0",
+        "mjanssen/laravel-5-breadcrumbs": " dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -33,7 +34,8 @@
             "app/Helpers/helpers.php"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "mjanssen\\BreadcrumbsBundle\\": "vendor/mjanssen/laravel-5-breadcrumbs/src"
         }
     },
     "autoload-dev": {

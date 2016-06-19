@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "42260c80430c76c9d4a7f563eac44292",
-    "content-hash": "26cdac72b0a5e17a563378b0b99e0ef6",
+    "hash": "a6959108a2680837d89dfbf9e52a33fc",
+    "content-hash": "821412df4944344367f64f3a83c1b8a5",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1010,6 +1010,34 @@
                 "storage"
             ],
             "time": "2016-04-28 06:53:12"
+        },
+        {
+            "name": "mjanssen/laravel-5-breadcrumbs",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mjanssen/Laravel-5-breadcrumbs-bundle.git",
+                "reference": "5a849e4f5b7476f8e7ce5cf1173c18709485488d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mjanssen/Laravel-5-breadcrumbs-bundle/zipball/5a849e4f5b7476f8e7ce5cf1173c18709485488d",
+                "reference": "5a849e4f5b7476f8e7ce5cf1173c18709485488d",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marnix Janssen",
+                    "email": "dev.marnix@gmail.com"
+                }
+            ],
+            "description": "A simple and powerfull way to create breadcrumbs in Laravel 5+",
+            "time": "2015-12-19 21:52:35"
         },
         {
             "name": "monolog/monolog",
@@ -3609,7 +3637,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mjanssen/laravel-5-breadcrumbs": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

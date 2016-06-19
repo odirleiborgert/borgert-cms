@@ -96,6 +96,7 @@
                     <div class="col-lg-12">
                         @yield('sidebar')
                         <div class="wrapper wrapper-content">
+                            @include('components.breadcrumbs')
                             @include('admin._inc.alerts')
                             @yield('content')
                             <br>
