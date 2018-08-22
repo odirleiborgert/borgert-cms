@@ -29,6 +29,7 @@
 | Description                 | English                               | Português (Brasil)                          | Chinese (Help translate)                    |
 |-----------------------------|---------------------------------------|---------------------------------------------|---------------------------------------------|
 | 1. Installation Guide       | [EN](docs/en/installation.md)         | [PT-BR](docs/pt-br/installation.md)         | 											  |
+| 1.1 Installation With Docker|   -                                   | [PT-BR](docs/pt-br/docker.md)               |                                            |
 | 2. User Guide               | [EN](docs/en/usage.md)                | [PT-BR](docs/pt-br/usage.md)                | 											  | 
 | 2.1 Routes                  | [EN](docs/en/usage.md#routes)         | [PT-BR](docs/pt-br/usage.md#routes)         | 											  |
 | 2.2 Controllers             | [EN](docs/en/usage.md#controllers)    | [PT-BR](docs/pt-br/usage.md#controllers)    | 											  |
